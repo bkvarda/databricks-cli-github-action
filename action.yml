@@ -5,9 +5,6 @@ inputs:
     description: 'Full command string of a valid Databricks CLI command'
     required: true
     default: 'databricks'
-branding:
-  icon: "align-justify"
-  color: "red"
 runs:
   using: 'docker'
   image: 'Dockerfile'

@@ -1,3 +1,2 @@
 #!/bin/bash 
-echo ""${*}""
-eval "${*}"
+eval "$1"

@@ -5,9 +5,6 @@ inputs:
     description: 'Full command string of a valid Databricks CLI command'
     required: true
     default: 'databricks'
-outputs:
-  output: # id of output
-  description: 'The output of the command'
 branding:
   icon: "align-justify"
   color: "red"

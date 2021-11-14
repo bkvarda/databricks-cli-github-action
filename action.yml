@@ -1,6 +1,12 @@
 name: 'Databricks CLI Runner'
 description: 'Runs arbitrary Databricks CLI commands'
 inputs:
+  databricks-host:
+    description: 'Full url of Databricks Workspace. e.g. https://my-workspace.databricks.com'
+    required: true
+  databricks-token:
+    description: 'API token to access Databricks Workspace'
+    required: true
   command:  # id of input
     description: 'Full command string of a valid Databricks CLI command'
     required: true
@@ -9,4 +15,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - ${{ inputs.databricks-host }}
+    - ${{ inputs.databricks-token }}
     - ${{ inputs.command }}

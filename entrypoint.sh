@@ -1,3 +1,5 @@
-#!/bin/sh -l
-echo "$DATABRICKS_HOST"
-eval "$1"
+#!/bin/bash
+export DATABRICKS_HOST=$1
+export DATABRICKS_TOKEN=$2
+
+eval "$3"
